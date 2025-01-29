@@ -1,8 +1,8 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
+import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import PaginaBase from '../PaginaBase';
-export default function Home() {
 
+export default function Home({ navigation }) {
     return (
         <View style={styles.container}>
             <PaginaBase>
@@ -11,15 +11,15 @@ export default function Home() {
                     <Text style={[styles.text, styles.title]}>Boas-vindas!</Text>
                     <Text style={styles.text}>Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</Text>
 
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
                         <Text style={styles.textoBotao}>Login</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Cadastro')}>
                         <Text style={styles.textoBotao}>Cadastro</Text>
                     </TouchableOpacity>
 
-                    <Image source={require('../../assets/CachorroEGato.png')} style={styles.imagem}></Image>
+                    <Image source={require('../../assets/CachorroEGato.png')} style={styles.imagem} />
                 </View>
             </PaginaBase>
         </View>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
 
     button: {
         borderRadius: 8,
-        backgroundColor: '#FC7071', // Pode ser ajustado conforme necessário
+        backgroundColor: '#FC7071',
         shadowColor: 'rgba(0, 0, 0, 0.12)',
         shadowOffset: {
             width: 2,
@@ -62,8 +62,8 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 1,
         shadowRadius: 4,
-        elevation: 4, // Adiciona a elevação para sombra no Android
-        padding: 10, // Pode ser ajustado conforme necessário
+        elevation: 4,
+        padding: 10,
         width: 200,
         alignSelf: 'center',
     },

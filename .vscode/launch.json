@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "exp://10.31.0.155:8081",
+            "request": "launch",
+            "url": "exp://10.31.0.155:8081"
+        }
+    ]
+}
