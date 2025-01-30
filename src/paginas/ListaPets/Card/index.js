@@ -9,7 +9,7 @@ export default function Card({ nome, idade, porte, imagem, caracteristicas, loca
                 nome: nome,
                 imagem: imagem,
                 localidade: localidade,
-                descricao: descricao,
+                descricao: descricao
             })}>
                 <Image source={imagem} />
             </TouchableOpacity>
